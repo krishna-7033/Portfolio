@@ -1,0 +1,227 @@
+body{
+    background-color: black;
+    color: turquoise;
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display:flex;
+  flex-direction: column;
+}
+.intro h1{
+    font-family: 'BBH Hegarty', cursive;
+    font-size: 5rem;
+    margin-bottom: 10px;    
+    margin-top: 10px;
+}
+#img{
+    border-radius: 30px;
+    height: 400px;
+    width: 350px;
+}
+.intro{
+    position: relative;
+    text-align: left;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+.intro-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.experience-row {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+.intro-text{
+    flex: 1 1 300px;
+}
+.intro-media{
+    flex: 0 1 380px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button{
+    background-color: #ADD8E6;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.about_me{
+    font-family: 'BBH Hegarty', cursive;
+    font-size: 2rem;   
+    float:left;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-top:-60px;
+}
+.Experience{
+    font-family: 'BBH Hegarty', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    float:left
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-top:-10px;
+}
+.p{
+    padding: 10px;
+    color: ghostwhite;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 20px 40px;
+}
+.Smart{
+    padding-left: 20px;
+   font-size: large;
+}
+.SIH{
+   border-radius: 7%;
+   border: none;
+   height: 270px;
+    width: 350px;
+    
+}
+.experience-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0 20px;
+}
+.experience-text{
+    flex: 1 1 300px;
+}
+.experience-media{
+    flex: 0 1 380px;
+    display: flex;
+    justify-content: flex-end;
+}
+@media(max-width: 800px){
+    #img{
+        float: none;
+        display: block;
+        margin: 20px auto;
+        height: auto;
+        width: 80%;
+        
+    }
+    .intro{
+        margin-right: 0;
+        text-align: center;
+    }
+    .intro-row{ justify-content: center; }
+    .intro-media{ justify-content: center; }
+    .intro h1{
+        font-size: 2.5rem;
+    }
+    .p{
+        font-size: 1.2rem;
+        margin: 20px;
+    }
+    .Experience, .about_me{
+        text-align: center;
+        margin: 10px 0;
+    }
+    .Smart{
+        padding-left: 0;
+        font-size: medium;
+    }
+    .SIH{
+        display: block;
+        margin: 20px auto;
+        height: auto;
+        width: 40%;
+        margin-top: 20px;
+    }
+    .experience-row{ justify-content: center; }
+    .experience-media{ justify-content: center; }
+}
+@media(max-width:1000px) and (min-width:801px){
+    #img{
+        height: 300px;
+        width: 250px;
+    }
+    .intro h1{
+        font-size: 2.5rem;
+    }
+    .p{
+        font-size: 1.1rem;
+        margin: 20px 30px;
+    }
+    .Experience, .about_me{
+        font-size: 2rem;
+    }
+    .Smart{
+        font-size: medium;
+    }
+    .SIH{
+        display: block;
+        margin: 20px auto;
+        height: auto;
+        width: 50%;
+        margin-top: 20px;
+    }
+    }
+
+@media(min-width:1001px) and (max-width:1286px)
+{
+    #img{
+        height: 400px;
+        width: 350px;
+    }
+    .intro h1{
+        font-size: 3rem;
+    }
+    .p{
+        font-size: 1.2rem;
+    }
+    .Experience, .about_me{
+        font-size: 3rem;
+    }
+    .Smart{
+        font-size: large;
+    }
+    .SIH{
+        display: block;
+        margin: 20px auto;
+        height: auto;
+        width: 60%;
+        margin-top: 20px;
+    }
+    }
+@media(min-width:1287px){
+    #img{
+        height: 400px;
+        width: 350px;
+    }
+    .intro h1{
+        font-size: 4.5rem;
+    }
+    .p{
+        font-size: 1rem;
+    }
+    .Experience, .about_me{
+        font-size: 3rem;
+    }
+    .Smart{
+        font-size: large;
+    }
+    .SIH{
+        height: 270px;
+        width: 350px;
+    }
+}
