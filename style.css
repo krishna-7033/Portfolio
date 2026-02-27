@@ -26,8 +26,9 @@ body{
 .developer{
     /* display: flex; */
     animation: 
-    typing 2.3s steps(18),
+    typing 3s steps(18),
     cursor 0.5s step-end infinite alternate;
+	animation-iteration-count: infinite;
     overflow: hidden;
     white-space: nowrap;
     font-size: 3.5rem;
