@@ -268,18 +268,18 @@ body{
 }
 /* Skills Section Styles */
 .section-skills {
-    padding: 40px 20px;
+    padding: 24px 16px;
 }
 
 .skills-category {
-    margin-bottom: 50px;
+    margin-bottom: 28px;
 }
 
 .category-title {
     font-family: 'BBH Hegarty', cursive;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #956afa;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -289,7 +289,7 @@ body{
     background: linear-gradient(135deg, rgba(149, 106, 250, 0.1) 0%, rgba(173, 216, 230, 0.05) 100%);
     border: 1px solid rgba(149, 106, 250, 0.3);
     border-radius: 12px;
-    padding: 20px;
+    padding: 14px;
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
@@ -308,21 +308,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .skill-name {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #ADD8E6;
     margin: 0;
 }
 
 .skill-level {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     color: #956afa;
     background-color: rgba(149, 106, 250, 0.2);
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 20px;
     text-transform: uppercase;
     font-weight: 600;
@@ -330,11 +330,11 @@ body{
 }
 
 .progress {
-    height: 6px;
+    height: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .progress-bar {
@@ -345,28 +345,32 @@ body{
 }
 
 .skill-desc {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: #b0c4de;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.35;
     flex-grow: 1;
 }
 
 @media (max-width: 768px) {
     .skills-category {
-        margin-bottom: 30px;
+        margin-bottom: 22px;
     }
     
     .category-title {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
     
     .skill-card {
-        padding: 15px;
+        padding: 12px;
     }
     
     .skill-name {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .skill-level {
+        font-size: 0.62rem;
     }
 }
 
@@ -417,6 +421,7 @@ body{
     overflow: hidden;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    height: 100%;
 }
 
 .project-card:hover {
@@ -427,7 +432,7 @@ body{
 
 .project-header {
     width: 100%;
-    height: 300px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -443,21 +448,21 @@ body{
 }
 
 .project-content {
-    padding: 25px;
+    padding: 16px;
 }
 
 .project-title {
     color: #ADD8E6;
     font-weight: 600;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
 }
 
 .tech-badges {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .tech-badge {
@@ -473,16 +478,16 @@ body{
 .project-points {
     list-style: none;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .project-points li {
     color: #b0c4de;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.82rem;
+    line-height: 1.45;
     padding-left: 20px;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .project-points li:before {
@@ -649,15 +654,20 @@ body{
     }
 
     .project-header {
-        height: 200px;
+        height: 160px;
     }
 
     .project-content {
-        padding: 15px;
+        padding: 12px;
     }
 
     .project-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .project-points li {
+        font-size: 0.78rem;
+        line-height: 1.35;
     }
 
     .cert-card {
