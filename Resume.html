@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Nandan Jha - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header .title {
+            font-size: 16px;
+            color: #4b5563;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .company {
+            font-size: 15px;
+            color: #4b5563;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+            color: #374151;
+        }
+
+        .experience-item li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .degree {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .school {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .school a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-category {
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .skill-category strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Certifications */
+        .cert-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .cert-list li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #374151;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .cert-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .cert-list a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cert-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Action Buttons */
+        .actions {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 0 8px;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        @media (max-width: 768px) {
+            .resume {
+                padding: 30px 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="actions no-print">
+        <button class="btn" onclick="window.print()">📄 Download as PDF</button>
+        <a href="portfolio2.html" class="btn btn-secondary">View Web Portfolio</a>
+    </div>
+
+    <div class="resume">
+        <!-- Header -->
+        <div class="header">
+            <h1>KRISHNA NANDAN JHA</h1>
+            <div class="title">Computer Science Undergraduate | Aspiring Full Stack Developer</div>
+            <div class="contact-info">
+                <span>📞<a href="callto:+917033169536"> +91 70331 69536</a></span>
+                <span>✉️ <a href="mailto:krishnajha7033@gmail.com">krishnajha7033@gmail.com</a></span>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p class="summary">Computer Science undergraduate and aspiring Full-Stack Developer with strong foundations
+                in C, C++(OOP), Python, and JavaScript. Skilled in building responsive web applications using HTML, CSS,
+                Bootstrap, and backend technologies like Node.js and Express.js. Passionate about problem solving, clean
+                code, and developing scalable web solutions. Experienced in collaborative development through hackathons
+                and technical projects, with a strong interest in modern web technologies.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+
+            <div class="education-item">
+                <div class="degree">B.Tech in Computer Science (2025 - 2029)</div>
+                <div class="school">
+                    <a href="https://www.juit.ac.in/" target="_blank">Jaypee University of Information Technology,
+                        Solan, Himachal Pradesh</a>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Higher Secondary Education (12th)</div>
+                <div class="school"><a href="https://opskne.in/" target="_blank">Oriental Public School, Kishanganj, Bihar</a></div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">Project Experience</div>
+
+            <div class="experience-item">
+                <div class="job-title">Software Developer - Smart India Hackathon (SIH) 2025</div>
+                <div class="company">Participant / Developer</div>
+                <ul>
+                    <li>Developed a working prototype solution based on real-world problem statement, demonstrating
+                        end-to-end software development skills</li>
+                    <li>Contributed across multiple technology layers including Frontend (HTML/CSS/JavaScript), Backend
+                        (Python), and Database design</li>
+                    <li>Collaborated effectively with cross-functional team members to finalize system architecture,
+                        workflow design, and technical documentation</li>
+                    <li>Applied agile development practices to deliver features within tight hackathon deadlines</li>
+                    <li>Strengthened problem-solving, project planning, and rapid prototyping capabilities through
+                        hands-on implementation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category"><strong>Programming Languages:</strong> C, C++(OOP), Python</div>
+                <div class="skill-category"><strong>Frontend Development:</strong> HTML5, CSS3, JavaScript, Bootstrap</div>
+                <div class="skill-category"><strong>Backend Development:</strong> Node.js, Express.js</div>
+                <div class="skill-category"><strong>Developer Tools:</strong> Git, GitHub, VS Code</div>
+                <div class="skill-category"><strong>Productivity Tools:</strong> MS Office Suite (Word, Excel,
+                    PowerPoint)</div>
+                <div class="skill-category"><strong>Core Competencies:</strong> Problem Solving, Analytical Thinking,
+                    Team Collaboration, Technical Communication</div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <div class="section-title">Certifications & Licenses</div>
+            <ul class="cert-list">
+                <li><a href="images/SIH.png" target="_blank">Smart India Hackathon 2025 - Certificate of
+                        Appreciation/Participation</a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-c1635910-d628-4738-b3bf-edd115af367b/" target="_blank">C++ (OOP) Certificate of Completion • Udemy</a></li>
+                <li><a href="https://www.credly.com/badges/cff8d6db-2136-43df-b8fb-7f3285501644/linked_in?t=tdnm9u" target="_blank">MongoDB-overview Certificate of Completion - MongoDB</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Automatically trigger print dialog when button is clicked
+        // This helps create PDF on most browsers via "Save as PDF" option
+    </script>
+</body>
+
+</html>
