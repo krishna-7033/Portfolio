@@ -17,7 +17,7 @@
 </head>
 
 <body class="bg-dark text-white">
-  <header class="topbar container">
+  <header class="topbar">
     <a class="brand" href="#home" aria-label="Go to home section">
       <span>
         <img class="brand-mark" src="images/profile.png" alt="Profile Picture" />
@@ -41,8 +41,8 @@
     </div>
   </header>
 
-  <main id="home" class="intro container">
-    <div class="hero-panel">
+  <main id="home" class="intro container reveal-on-scroll">
+    <div class="hero-panel reveal-on-scroll">
       <div class="intro-row">
         <div class="intro-text">
           <p class="eyebrow">Hello, I’m Krishna Nandan Jha</p>
@@ -110,7 +110,7 @@
       </div>
     </div>
   </main>
-  <section id="about" class="about">
+  <section id="about" class="about reveal-on-scroll">
     <h2 class="about_me">About Me</h2>
     <hr />
     <div class="section-about content-card container">
@@ -163,7 +163,7 @@
       </p>
     </div>
   </section>
-  <div id="projects" class="experience-section">
+  <div id="projects" class="experience-section reveal-on-scroll">
     <p class="Experience">Projects</p>
     <hr />
     <br />
@@ -361,7 +361,7 @@
     </div>
   </div>
 
-  <div id="skills" class="section-skills">
+  <div id="skills" class="section-skills reveal-on-scroll">
     <p class="Experience">Skills</p>
     <hr />
     <br />
@@ -598,7 +598,7 @@
     </div>
   </div>
 
-  <div class="section-Education">
+  <div class="section-Education reveal-on-scroll">
     <p class="Experience">Certifications</p>
     <hr />
     <br />
@@ -709,7 +709,7 @@
     </div>
   </div>
   <br />
-  <div class="section-Education">
+  <div class="section-Education reveal-on-scroll">
     <p class="Experience">Education</p>
     <hr />
     <br />
@@ -760,6 +760,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script>
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  </script>
 </body>
 
 </html>
