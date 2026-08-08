@@ -7,13 +7,13 @@
   <meta name="description"
     content="Krishna Nandan Jha — Full Stack Developer Portfolio showcasing skills, certifications, experience, and projects." />
   <title>Krishna Nandan Jha — Full Stack Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Libre+Baskerville:ital@0;1&display=swap"
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-dark text-white">
@@ -738,7 +738,52 @@
       </div>
     </div>
   </div>
-  <div id="contact" class="footer">
+  <section id="contact" class="contact-section reveal-on-scroll">
+    <h2 class="about_me">Contact</h2>
+    <hr />
+    <br />
+    <div class="contact-grid container reveal-on-scroll">
+      <div class="contact-left">
+        <p class="contact-subtitle">Get in touch before I write another line of code!</p>
+        <p class="p">Have a project or want to collaborate? Send a message — I'll get back as soon as I can.</p>
+      </div>
+
+      <div class="contact-right section-contact content-card">
+        <form id="contact-form" class="contact-form" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="cf-name" class="form-label">Name <span class="required">*</span></label>
+            <input type="text" id="cf-name" name="name" class="form-control" required />
+          </div>
+
+          <div class="col-md-6">
+            <label for="cf-email" class="form-label">Email <span class="required">*</span></label>
+            <input type="email" id="cf-email" name="email" class="form-control" required />
+            <small class="form-text text-muted">Temporary emails are also accepted, unless you wish to hear back 🙂</small>
+          </div>
+
+          <div class="col-12">
+            <label for="cf-subject" class="form-label">Subject</label>
+            <input type="text" id="cf-subject" name="subject" class="form-control" />
+          </div>
+
+          <div class="col-12">
+            <label for="cf-message" class="form-label">Message</label>
+            <textarea id="cf-message" name="message" class="form-control" rows="5" required></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="button w-100" id="cf-submit">Submit</button>
+            <span id="cf-status" class="mx-2"></span>
+          </div>
+        </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer" class="footer">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-4 mb-0 px-4">© 2026 Krishna, Inc</p>
       <ul class="nav col-md-4 px-4 justify-content-end">
@@ -777,6 +822,49 @@
     );
 
     revealElements.forEach((element) => revealObserver.observe(element));
+
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      const submitBtn = document.getElementById('cf-submit');
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('cf-name').value.trim();
+        const email = document.getElementById('cf-email').value.trim();
+        const subject = document.getElementById('cf-subject').value.trim() || 'Message from Portfolio';
+        const message = document.getElementById('cf-message').value.trim();
+        const status = document.getElementById('cf-status');
+
+        if (!name || !email || !subject) {
+          status.textContent = 'Please complete required fields.';
+          status.style.color = '#ff6b6b';
+          return;
+        }
+
+        // Prepare UI feedback
+        status.textContent = 'Preparing your message...';
+        status.style.color = 'var(--muted)';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Opening...';
+        }
+
+        const bodyFull = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailto = `mailto:krishnajha7033@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyFull)}`;
+
+        // Open mail client (may not navigate away depending on client)
+        window.location.href = mailto;
+
+        // Show success-like message after attempted open
+        setTimeout(() => {
+          status.textContent = 'Email draft opened in your mail client — please press Send to complete.';
+          status.style.color = '#8af58a';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+          }
+        }, 800);
+      });
+    }
   </script>
 </body>
 
